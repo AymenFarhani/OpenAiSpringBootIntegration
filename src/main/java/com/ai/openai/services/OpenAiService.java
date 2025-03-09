@@ -10,7 +10,7 @@ public class OpenAiService {
 
     private final OpenAiChatModel openAiChatModel;
 
-    public OpenAiService(@Value("${openai.api-key}") String apiKey) {
+    public OpenAiService(@Value("${spring.ai.openai.api-key}") String apiKey) {
         this.openAiChatModel = OpenAiChatModel.builder()
                 .openAiApi(OpenAiApi.builder().apiKey(apiKey).build())
                 .build();
